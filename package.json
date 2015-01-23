@@ -1,0 +1,26 @@
+{
+  "name": "grunt-websize",
+  "description": "A Grunt plugin for logging web page size.",
+  "version": "0.0.1",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tiborbotos/grunt-websize.git"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/tiborbotos/grunt-websize/blob/master/LICENSE-MIT"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "child": "*"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  }
+}
