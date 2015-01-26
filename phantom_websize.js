@@ -4,7 +4,7 @@ var page = require('webpage').create(),
 	address = "http://gawker.com?nosso=1",
 	loaded = 0,
 	recieved = 0,
-	additionalWaiting;
+	additionalWaiting = 10000;
 
 if (system.args.length === 1) {
 	console.log('Failed! Missing url!');

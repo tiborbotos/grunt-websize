@@ -1,16 +1,25 @@
 'use strict';
 
 module.exports = function (grunt) {
-	var child = require('child');
+	var exec = require('child_process').execFile,
+		child;
 
 	grunt.registerMultiTask('websize', 'A Grunt plugin for logging filesize.', function() {
-		child = exec('phantomjs --web-security=false kinjasize.js http://replicationlag.kinja.com?nosso=1 10000',
+
+		var options = this.options({
+			timeout: 1000
+		});
+
+		exec('phantomjs --web-security=false phantom_websize.js http://replicationlag.kinja.com?nosso=1 10000',
+			{timeout: 30000, cwd: '..'},
 			function (error, stdout, stderr) {
-				grunt.log.writeln('stdout: ' + stdout);
-				grunt.log.writeln('stderr: ' + stderr);
-				if (error !== null) {
-					grunt.log.writeln('exec error: ' + error);
-				}
-			});
+
+			console.log('FOOO')
+			grunt.log.writeln('stdout: ' + stdout);
+			grunt.log.writeln('stderr: ' + stderr);
+			if (error !== null) {
+				grunt.log.writeln('exec error: ' + error);
+			}
+		});
 	});
-}
+};

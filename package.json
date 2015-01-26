@@ -17,10 +17,14 @@
     }
   ],
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "child": "*"
+		"grunt-cli": "~0.1.9",
+		"grunt-contrib-jshint": "~0.6.0",
+		"grunt": "~0.4.2"
   },
   "peerDependencies": {
     "grunt": "~0.4.2"
+  },
+  "bugs": {
+    "url": "https://github.com/tiborbotos/grunt-websize/issues"
   }
 }

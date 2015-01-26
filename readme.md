@@ -1,3 +1,3 @@
 # grunt-websize
 
-Grunt plugin for loggin web page size
+Grunt plugin for logging web page size
