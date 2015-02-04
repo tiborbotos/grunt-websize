@@ -1,7 +1,7 @@
 {
   "name": "grunt-websize",
   "description": "A Grunt plugin for logging web page size.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
