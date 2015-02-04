@@ -20,14 +20,26 @@ module.exports = function(grunt) {
 		},
 		websize: {
 			default: {
-				url: 'http://gawker.com'
+				options: {
+					url: 'http://google.com',
+					timeout: 1000,
+					reportPath: 'websize/google.txt',
+					append: false
+				}
+			},
+			defaultWithAppend: {
+				options: {
+					url: 'http://google.com',
+					timeout: '1000',
+					reportPath: 'websize/google.txt',
+					append: true,
+					historyLength: 3
+				}
 			}
 		}
 	});
 
-	// These plugins provide necessary tasks.
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-//	grunt.loadNpmTasks('child_process');
 	grunt.loadTasks('tasks');
 
 	grunt.registerTask('default', ['jshint']);
